@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "0BsMXbdlkJDfJCdHcR1FKI/foR3pIT43uslHx8SMB1s=",
+  "Source": "CleanArchMvc.API",
+  "BasePath": "_content/CleanArchMvc.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
