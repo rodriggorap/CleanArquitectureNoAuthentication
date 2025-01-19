@@ -226,3 +226,11 @@ C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domai
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\obj\Debug\net8.0\CleanArchMvc.Domain.Tests.pdb
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\obj\Debug\net8.0\CleanArchMvc.Domain.Tests.genruntimeconfig.cache
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\obj\Debug\net8.0\ref\CleanArchMvc.Domain.Tests.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\bin\Debug\net8.0\Bogus.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\bin\Debug\net8.0\Castle.Core.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\bin\Debug\net8.0\ExpectedObjects.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\bin\Debug\net8.0\Moq.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Domain.Tests\obj\Debug\net8.0\CleanArchMvc.Domain.Tests.sourcelink.json

@@ -32,3 +32,4 @@ C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.Data\obj\Debug\net8.0\CleanArchMvc.Infra.Data.pdb
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.Data\obj\Debug\net8.0\CleanArchMvc.Infra.Data.genruntimeconfig.cache
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.Data\obj\Debug\net8.0\ref\CleanArchMvc.Infra.Data.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.Data\obj\Debug\net8.0\CleanArchMvc.Infra.Data.sourcelink.json

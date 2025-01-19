@@ -54,6 +54,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[35.6.1, )"
+            },
+            "ExpectedObjects": {
+              "target": "Package",
+              "version": "[3.5.4, )"
+            },
             "FluentAssertions": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -61,6 +69,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
             },
             "coverlet.collector": {
               "target": "Package",

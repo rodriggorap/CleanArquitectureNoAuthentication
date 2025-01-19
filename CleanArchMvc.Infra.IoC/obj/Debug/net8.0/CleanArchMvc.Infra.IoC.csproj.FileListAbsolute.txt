@@ -40,3 +40,4 @@ C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\obj\Debug\net8.0\CleanArc.C4193000.Up2Date
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\obj\Debug\net8.0\CleanArchMvc.Infra.IoC.genruntimeconfig.cache
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\obj\Debug\net8.0\ref\CleanArchMvc.Infra.IoC.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\obj\Debug\net8.0\CleanArchMvc.Infra.IoC.sourcelink.json

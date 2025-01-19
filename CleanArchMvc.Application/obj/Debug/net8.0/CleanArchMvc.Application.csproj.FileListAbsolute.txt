@@ -28,3 +28,4 @@ C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Appli
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Application\obj\Debug\net8.0\refint\CleanArchMvc.Application.dll
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Application\obj\Debug\net8.0\CleanArchMvc.Application.pdb
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Application\obj\Debug\net8.0\ref\CleanArchMvc.Application.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Application\obj\Debug\net8.0\CleanArchMvc.Application.sourcelink.json
