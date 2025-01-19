@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanArchMvc.Infra.IoC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96cd12652984206bd512e534e7fa8e7fbdc37f11")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8284475dfe20e6bb6fa2dde54de2e6effaffbdc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanArchMvc.Infra.IoC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanArchMvc.Infra.IoC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
