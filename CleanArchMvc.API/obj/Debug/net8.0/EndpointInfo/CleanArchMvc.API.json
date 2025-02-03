@@ -152,8 +152,16 @@
         ],
         "parameters": [
           {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "pagina",
             "in": "query",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -162,6 +170,7 @@
           {
             "name": "tamanhoPagina",
             "in": "query",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"

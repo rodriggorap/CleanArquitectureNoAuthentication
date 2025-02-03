@@ -1,4 +1,5 @@
-﻿using CleanArchMvc.Application.DTOs;
+﻿using System.ComponentModel.DataAnnotations;
+using CleanArchMvc.Application.DTOs;
 using CleanArchMvc.Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,25 +18,28 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<CategoryDTO>>> Get()
+    public ActionResult<IEnumerable<CategoryDTO>> Get()
     {
-        var categories = await _categoryService.GetCategories();
+        var categories = _categoryService.GetCategories();
 
         return Ok(categories);
     }
 
     [HttpGet("paginado")]
-    public async Task<ActionResult<IEnumerable<CategoryDTO>>> Get(int pagina, int tamanhoPagina)
+    public ActionResult<IEnumerable<CategoryDTO>> Get(
+         [FromQuery] string? name,
+         [FromQuery][Required] int pagina,
+         [FromQuery][Required] int tamanhoPagina)
     {
-        var categories = await _categoryService.GetCategories(pagina, tamanhoPagina);
+        var categories = _categoryService.GetCategories(name!, pagina, tamanhoPagina);
 
         return Ok(categories);
     }
 
     [HttpGet("{id:int}", Name = "GetCategory")]
-    public async Task<ActionResult<CategoryDTO>> Get(int id)
+    public ActionResult<CategoryDTO> Get(int id)
     {
-        var category = await _categoryService.GetById(id);
+        var category = _categoryService.GetById(id);
 
         if (category == null)
         {
@@ -46,9 +50,9 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<CategoryDTO>> Post([FromBody] CategoryDTO categoryDTO)
+    public ActionResult<CategoryDTO> Post([FromBody] CategoryDTO categoryDTO)
     {
-        var categories = await _categoryService.GetCategories();
+        var categories = _categoryService.GetCategories();
 
         var category = categories
             .Where(c => c.Name.Equals(categoryDTO.Name, StringComparison.OrdinalIgnoreCase));
@@ -58,20 +62,20 @@ public class CategoriesController : ControllerBase
             return BadRequest("Categoria já cadastrada...");
         }
 
-        var categoryDtoCreate = await _categoryService.Add(categoryDTO);
+        var categoryDtoCreate = _categoryService.Add(categoryDTO);
 
         return new CreatedAtRouteResult("GetCategory", new {id = categoryDtoCreate.Id}, categoryDtoCreate);
     }
 
     [HttpPut]
-    public async Task<ActionResult<CategoryDTO>> Put(int id, [FromBody] CategoryDTO categoryDTO)
+    public ActionResult<CategoryDTO> Put(int id, [FromBody] CategoryDTO categoryDTO)
     {
         if (id != categoryDTO.Id)
         {
             return BadRequest("Dados inválidos...");
         }
 
-        var categories = await _categoryService.GetCategories();
+        var categories = _categoryService.GetCategories();
         
         var category = categories
             .Where(c => c.Name.Equals(categoryDTO.Name, StringComparison.OrdinalIgnoreCase)
@@ -82,21 +86,21 @@ public class CategoriesController : ControllerBase
             return BadRequest("Categoria já cadastrada...");
         }
 
-        var categoryDtoUpdate = await _categoryService.Update(categoryDTO);
+        var categoryDtoUpdate = _categoryService.Update(categoryDTO);
 
         return Ok(categoryDtoUpdate);
     }
 
     [HttpDelete("{id:int}")]
-    public async Task<ActionResult<CategoryDTO>> Delete(int id)
+    public ActionResult<CategoryDTO> Delete(int id)
     {
-        var category = await _categoryService.GetById(id);
+        var category = _categoryService.GetById(id);
         if (category == null)
         {
-            return NotFound();
+            return NotFound("Category not found");
         }
 
-        var categoryDtoDelete = await _categoryService.Remove(id);
+        var categoryDtoDelete = _categoryService.Remove(id);
 
         return Ok(categoryDtoDelete);
     }

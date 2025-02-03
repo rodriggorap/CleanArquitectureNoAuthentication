@@ -1,4 +1,5 @@
-﻿using CleanArchMvc.Domain.Entities;
+﻿using Bogus;
+using CleanArchMvc.Domain.Entities;
 
 namespace CleanArchMvc.Application.Test._Builders;
 

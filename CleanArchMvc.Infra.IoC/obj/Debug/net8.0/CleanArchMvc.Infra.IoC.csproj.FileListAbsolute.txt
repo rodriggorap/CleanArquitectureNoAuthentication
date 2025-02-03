@@ -41,3 +41,12 @@ C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\obj\Debug\net8.0\CleanArchMvc.Infra.IoC.genruntimeconfig.cache
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\obj\Debug\net8.0\ref\CleanArchMvc.Infra.IoC.dll
 C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\obj\Debug\net8.0\CleanArchMvc.Infra.IoC.sourcelink.json
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\CleanArchMvc.Application.Tests.deps.json
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\CleanArchMvc.Application.Tests.runtimeconfig.json
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\testhost.exe
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\testhost.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\CleanArchMvc.Application.Tests.dll
+C:\Cursos\Clean Architecture - no authentication\CleanArchMvc\CleanArchMvc.Infra.IoC\bin\Debug\net8.0\CleanArchMvc.Application.Tests.pdb

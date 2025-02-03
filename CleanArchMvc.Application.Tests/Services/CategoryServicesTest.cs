@@ -57,27 +57,27 @@ public class CategoryServicesTest
     }
 
     [Fact]
-    public async Task DeveRetornarUmaCategoria()
+    public void DeveRetornarUmaCategoria()
     { 
 
-        _categoryRepositoryMock.Setup(r => r.GetById(_id)).ReturnsAsync(_category);
+        _categoryRepositoryMock.Setup(r => r.GetById(_id)).Returns(_category);
 
         _mockMapper.Setup(m => m.Map<CategoryDTO>(_category)).Returns(_categoryDTO);
 
-        var result = await _categoryServicesMock.GetById(_id);
+        var result = _categoryServicesMock.GetById(_id);
 
         Assert.Equal(_category.Id, result.Id);
         Assert.IsType<CategoryDTO>(result);
     }
 
     [Fact]
-    public async Task DeveRetornarCategorias()
+    public void DeveRetornarCategorias()
     {   
-        _categoryRepositoryMock.Setup(r => r.GetCategories()).ReturnsAsync(_categories);
+        _categoryRepositoryMock.Setup(r => r.GetCategories()).Returns(_categories);
 
         _mockMapper.Setup(m => m.Map<IEnumerable<CategoryDTO>>(_categories)).Returns(_categoriesDTO);
 
-        var result = await _categoryServicesMock.GetCategories();
+        var result = _categoryServicesMock.GetCategories();
 
         Assert.NotNull(result);
         Assert.IsAssignableFrom<IEnumerable<CategoryDTO>>(result);
@@ -85,13 +85,13 @@ public class CategoryServicesTest
     }
 
     [Fact]
-    public async Task DeveRetornarCategoriasPaginadas()
+    public void DeveRetornarCategoriasPaginadas()
     {
-        _categoryRepositoryMock.Setup(r => r.GetCategories(1, 10)).ReturnsAsync(_categories);
+        _categoryRepositoryMock.Setup(r => r.GetCategories("testes", 1, 10)).Returns(_categories);
 
         _mockMapper.Setup(m => m.Map<IEnumerable<CategoryDTO>>(_categories)).Returns(_categoriesDTO);
 
-        var result = await _categoryServicesMock.GetCategories(1, 10);
+        var result = _categoryServicesMock.GetCategories("testes", 1, 10);
 
         Assert.NotNull(result);
         Assert.IsAssignableFrom<IEnumerable<CategoryDTO>>(result);
@@ -99,45 +99,45 @@ public class CategoryServicesTest
     }
 
     [Fact]
-    public async Task DeveAdicionarUmaCategoria()
+    public void DeveAdicionarUmaCategoria()
     {
         _mockMapper.Setup(m => m.Map<Category>(_categoryDTO)).Returns(_category);
 
-        _categoryRepositoryMock.Setup(r => r.Create(_category)).ReturnsAsync(_category);
+        _categoryRepositoryMock.Setup(r => r.Create(_category)).Returns(_category);
 
         _mockMapper.Setup(m => m.Map<CategoryDTO>(_category)).Returns(_categoryDTO);
 
-        var result = await _categoryServicesMock.Add(_categoryDTO);
+        var result = _categoryServicesMock.Add(_categoryDTO);
 
         Assert.Equal(_category.Id, result.Id);
         Assert.IsType<CategoryDTO>(result);
     }
 
     [Fact]
-    public async Task DeveAtualizarUmaCategoria()
+    public void DeveAtualizarUmaCategoria()
     {
         _mockMapper.Setup(m => m.Map<Category>(_categoryDTO)).Returns(_category);
 
-        _categoryRepositoryMock.Setup(r => r.Update(_category)).ReturnsAsync(_category);
+        _categoryRepositoryMock.Setup(r => r.Update(_category)).Returns(_category);
 
         _mockMapper.Setup(m => m.Map<CategoryDTO>(_category)).Returns(_categoryDTO);
 
-        var result = await _categoryServicesMock.Update(_categoryDTO);
+        var result = _categoryServicesMock.Update(_categoryDTO);
 
         Assert.Equal(_category.Id, result.Id);
         Assert.IsType<CategoryDTO>(result);
     }
 
     [Fact]
-    public async Task DeveRemoverUmaCategoria()
+    public void DeveRemoverUmaCategoria()
     {
-        _categoryRepositoryMock.Setup(r => r.GetById(_categoryDTO.Id)).ReturnsAsync(_category);
+        _categoryRepositoryMock.Setup(r => r.GetById(_categoryDTO.Id)).Returns(_category);
 
-        _categoryRepositoryMock.Setup(r => r.Remove(_category)).ReturnsAsync(_category);
+        _categoryRepositoryMock.Setup(r => r.Remove(_category)).Returns(_category);
 
         _mockMapper.Setup(m => m.Map<CategoryDTO>(_category)).Returns(_categoryDTO);
 
-        var result = await _categoryServicesMock.Remove(_categoryDTO.Id);
+        var result = _categoryServicesMock.Remove(_categoryDTO.Id);
 
         Assert.Equal(_category.Id, result.Id);
         Assert.IsType<CategoryDTO>(result);

@@ -138,6 +138,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "pagina",
         "Type": "System.Int32",
         "IsRequired": false

@@ -1,4 +1,5 @@
-﻿using CleanArchMvc.Domain.Entities;
+﻿using System.Collections.Generic;
+using CleanArchMvc.Domain.Entities;
 using CleanArchMvc.Domain.Interfaces;
 using CleanArchMvc.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
@@ -14,46 +15,47 @@ public class CategoryRepository : ICategoryRepository
         _categoryContext = categoryContext;
     }
 
-    public async Task<Category> Create(Category category)
+    public Category Create(Category category)
     {
         _categoryContext.Add(category);
-        await _categoryContext.SaveChangesAsync();
+        _categoryContext.SaveChangesAsync();
         return category;
     }
 
-    public async Task<Category> GetById(int? id)
+    public Category GetById(int? id)
     {
-        return await _categoryContext.Categories.FindAsync(id);
+        return _categoryContext.Categories.Find(id);
     }
 
-    public async Task<IEnumerable<Category>> GetCategories()
+    public IEnumerable<Category> GetCategories()
     {
-        return await _categoryContext.Categories.AsNoTracking().ToListAsync();
+        return _categoryContext.Categories.AsNoTracking().ToList();
     }
 
-    public async Task<IEnumerable<Category>> GetCategories(int pagina, int tamanhoPagina)
+    public IEnumerable<Category> GetCategories(string nome, int pagina, int tamanhoPagina)
     {
-        var categories =  await _categoryContext.Categories.AsNoTracking().ToListAsync();
-        if (pagina == 0)
-        {
-            pagina = 1;
-        }
         var skip = (pagina - 1) * tamanhoPagina;
+
+        var categories = _categoryContext.Categories.AsNoTracking().ToList();
+
+        if (!string.IsNullOrEmpty(nome))
+            categories = categories.Where(x => x.Name!.ToLower().Contains(nome.ToLower())).ToList();
+
         categories = categories.Skip(skip).Take(tamanhoPagina).ToList();
         return categories;
     }
 
-    public async Task<Category> Remove(Category category)
+    public Category Remove(Category category)
     {
         _categoryContext.Remove(category);
-        await _categoryContext.SaveChangesAsync();
+        _categoryContext.SaveChanges();
         return category;
     }
 
-    public async Task<Category> Update(Category category)
+    public Category Update(Category category)
     {
         _categoryContext.Update(category);
-        await _categoryContext.SaveChangesAsync();
+        _categoryContext.SaveChanges();
         return category;
     }
 }
