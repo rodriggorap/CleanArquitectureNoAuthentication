@@ -5,8 +5,17 @@ namespace CleanArchMvc.Application.Test._Builders;
 
 public class CategoryBuilder
 {
-    private int _id = 0;
-    private string _nome = "Nome";
+    private readonly Faker faker;
+
+    private int _id;
+    private string _nome;
+
+    private CategoryBuilder()
+    {
+        faker = new();
+        _id = faker.Random.Int(10, 20);
+        _nome = faker.Random.Word();
+    }
 
     public static CategoryBuilder Novo()
     {
